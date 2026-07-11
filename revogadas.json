@@ -1,0 +1,4 @@
+{
+  "_instrucoes": "Lista de chaves CANCELADAS (gerada pelo Painel de Chaves). Suba este arquivo para a URL configurada no app (REVOGACAO_URL). Para reativar, remova a chave.",
+  "revogadas": []
+}
