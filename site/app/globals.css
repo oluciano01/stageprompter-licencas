@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/*
+  Paleta calma, alto contraste, pensada para celular e para leitura à noite.
+  Nada de vermelho de alarme: quem chega aqui já se sente mal o bastante.
+*/
+:root {
+  --cor-fundo: #fbf9f6;
+  --cor-superficie: #ffffff;
+  --cor-superficie-2: #f2efe9;
+  --cor-borda: #e2ddd4;
+  --cor-tinta: #17211e;
+  --cor-tinta-fraca: #55605c;
+  --cor-acento: #0f6d5e;
+  --cor-acento-forte: #0a5448;
+  --cor-acento-suave: #e6f1ee;
+  --cor-aviso: #7a5200;
+  --cor-aviso-fundo: #fdf3e0;
+  --cor-aviso-borda: #eddcb8;
+  --cor-calma: #33487e;
+  --cor-calma-fundo: #eceffa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #101614;
+    --cor-superficie: #17201d;
+    --cor-superficie-2: #1e2926;
+    --cor-borda: #2b3733;
+    --cor-tinta: #e9efec;
+    --cor-tinta-fraca: #a4b1ac;
+    --cor-acento: #5fc3ac;
+    --cor-acento-forte: #86d6c2;
+    --cor-acento-suave: #17302a;
+    --cor-aviso: #e8c383;
+    --cor-aviso-fundo: #2a2317;
+    --cor-aviso-borda: #453a24;
+    --cor-calma: #a9baf0;
+    --cor-calma-fundo: #1a2138;
+  }
+}
+
+@theme inline {
+  --color-fundo: var(--cor-fundo);
+  --color-superficie: var(--cor-superficie);
+  --color-superficie-2: var(--cor-superficie-2);
+  --color-borda: var(--cor-borda);
+  --color-tinta: var(--cor-tinta);
+  --color-tinta-fraca: var(--cor-tinta-fraca);
+  --color-acento: var(--cor-acento);
+  --color-acento-forte: var(--cor-acento-forte);
+  --color-acento-suave: var(--cor-acento-suave);
+  --color-aviso: var(--cor-aviso);
+  --color-aviso-fundo: var(--cor-aviso-fundo);
+  --color-aviso-borda: var(--cor-aviso-borda);
+  --color-calma: var(--cor-calma);
+  --color-calma-fundo: var(--cor-calma-fundo);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  color-scheme: light dark;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--cor-fundo);
+  color: var(--cor-tinta);
+  font-family: var(--font-sans);
+  /* Texto grande por padrão: muita gente lê isto de madrugada, no celular. */
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Foco sempre visível — parte da acessibilidade, não enfeite. */
+:focus-visible {
+  outline: 3px solid var(--cor-acento);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
